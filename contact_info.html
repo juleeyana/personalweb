@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <!-- Font Awesome CSS --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            transition: background-color 0.5s ease;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            margin-right: 0px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+        
+        section{
+            margin-bottom: 20px;
+        }
+        
+        .intro{
+            padding-left: 120px;
+            padding-top: 120px;            
+            margin-bottom: 20px;            
+            text-align: left;  /* Align content to left */
+            position: relative;            
+            
+        }
+
+        .pic2 .yellow{
+            width: 290px;
+            height: 380px;
+            border-radius: 30%;
+            margin-top: 70px; 
+            margin-right: 80px;          
+            float: right;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+
+        .theme-toggle { 
+            text-align: right;       
+            margin-right: 20px;     
+        }
+                       
+        .theme-button {
+            float: right;                      
+            width: 20px;
+            height: 40px;
+            border-radius: 30px;
+            font-size: 16px;
+            border: solid black 1px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+            display: flex; /* Add flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            margin: 0 auto; /* Center the button */
+        }
+        
+        .theme-button:hover {
+            transform: scale(1.1);
+        }
+        
+        .containerism {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .infos {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000000;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .infos:hover {
+            background-color: #45a049;
+        }
+
+        .infos:visited {
+            background-color: #555; /* Dark grey */
+        }
+
+        .infos:visited:hover {
+            background-color: #666; /* Darker grey */
+        }
+        
+        .socmed {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .socmed h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .socmed a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .socmed a:hover {
+            transform: scale(1.2);
+        }
+        
+        /* Adjust the font size of the icons */
+        .social-icons i {
+            font-size: 36px; /* Change this value to adjust the icon size */
+        }
+            
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="containerism">
+            
+           <div class="theme-toggle"> 
+                <!-- CLICKABLE BUTTONS FOR THE HOMEPAGE AND LIGHT/DARK MODE */ --> 
+               <button id="theme-toggle" class="theme-button"><i class="fa fa-eye" aria-hidden="true"></i></button> 
+               <button id="theme-toggle" class="theme-button" style="margin-right: 20px; "onclick="location.href='index.html'"><i class="fas fa-home"></i></button></div>              
+            </div>            
+        </div>
+    </header>
+    
+    <div class="here">
+            
+    </div>
+    <!-- MAIN TAG SERVE AS THE CONTAINER OF THE PERSONAL INFO -->
+    <main>
+        <div class="container">            
+            <div class="pic2">
+                <img src="me.png" alt="yellow" class="yellow">
+            
+            <br><br><br>
+            <section class="intro" style="margin: 0px;">
+                <p style="margin: 0px;">Hello, I am</p>
+                <h2 style="margin: 0px;" >JULIANA BAGON</h2>
+                <p style="margin: 0px;">LIVE. LOVE. LAUGH</p>
+            </section>
+            </div>
+            
+            <div class="socmed">
+                <h2>CONTACT</h2>
+                <!-- DIVIDER FOR THE INPUT DATA -->
+                <div>
+                    <!-- LINKS OF THE PROVIDED SOCIAL.MEDIA PLATFORM TO CONTACT -->
+        <a href="https://www.facebook.com/julianabandal.bagon?mibextid=ZbWKwL" target="_blank" class="social-icons"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/julieebgn?igsh=MWl4c2dyNjI5eTNsbQ==" target="_blank" class="social-icons"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@juleeeyana?_t=8kB7NbfJouI&_r=1" target="_blank" class="social-icons"><i class="fab fa-tiktok"></i></a>
+        <a href="https://x.com/yanaczx?s=09" target="_blank" class="social-icons"><i class="fab fa-twitter"></i></a>
+        <a href="bagonjuliana@gmail.com" class="social-icons"><i class="far fa-envelope"></i></a>
+    </div>
+            </div>
+            
+            <!-- THIS SECTION IS FOR HE ORGANIZATION OF CLICKABLE BUTTONS THAT WILL DIRECT TO HE OTHER WEBPAGES -->
+            <section>
+                <div class="containerism">
+        <h1>Get to know more about me!</h1>
+        <button class="infos"  onclick="location.href='personal_info.html'">Personal Information</button>
+        <button class="infos"  onclick="location.href='skills.html'">Skills</button>
+        <button class="infos"  onclick="location.href='education_projects.html'">Education & Projects</button>
+        <button class="infos"  onclick="location.href='work_experience.html'">Work Experience</button>
+        <button class="infos"  onclick="location.href='contact_info.html'">Contact Information</button>
+    </div>
+            </section>
+           
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Personal Website</p>
+        </div>
+    </footer>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        let darkMode = false;
+
+        function toggleTheme() {
+            darkMode = !darkMode;
+            if (darkMode) {
+                document.body.style.backgroundColor = '#222';
+                document.body.style.color = '#fff';
+                themeToggle.innerText = '☀';
+            } else {
+                document.body.style.backgroundColor = '#f0f0f0';
+                document.body.style.color = '#333';
+                themeToggle.innerText = '🌙';
+            }
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+               
+    </script>
+</body>
+</html>

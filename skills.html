@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <!-- Font Awesome CSS --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            transition: background-color 0.5s ease;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            margin-right: 0px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        
+        main {
+            padding: 20px 0;
+        }
+        
+        section{
+            margin-bottom: 20px;
+        }               
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+       
+        .theme-toggle { 
+            text-align: right;       
+            margin-right: 20px;     
+        }
+                       
+        .theme-button {
+            float: right;                      
+            width: 20px;
+            height: 40px;
+            border-radius: 30px;
+            font-size: 16px;
+            border: solid black 1px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+            display: flex; /* Add flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            margin: 0 auto; /* Center the button */
+        }
+        
+        .theme-button:hover {
+            transform: scale(1.1);
+        }
+        
+        .containerism {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .infos {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000000; /* Green */
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .infos:hover {
+            background-color: #45a049;
+        }
+
+        .infos:visited {
+            background-color: #555; /* Dark grey */
+        }
+
+        .infos:visited:hover {
+            background-color: #666; /* Darker grey */
+        }               
+        
+        td img{
+            margin: 30px;
+            width: 250px;
+            height: 280px;
+        }
+           
+    </style>
+</head>
+<body>
+    <header>
+        <!-- CONTAINER FOR THE NAVIGATOR BAR IN TOP  -->
+        <div class="containerism">
+           <div class="theme-toggle"> 
+               <!-- CLICKABLE BUTTONS FOR THE HOMEPAGE AND LIGHT/DARK MODE */ --> 
+               <button id="theme-toggle" class="theme-button"><i class="fa fa-eye" aria-hidden="true"></i></button> 
+               <button id="theme-toggle" class="theme-button" style="margin-right: 20px; "onclick="location.href='index.html'"><i class="fas fa-home"></i></button></div>              
+            </div>            
+        </div>
+    </header>
+    
+    <!-- DVIDER FOR THE TABLE ORGABIZATION OF INPUT DATA -->
+    <div>
+        <table>
+    <tr><br><br><br> <br><br><br> 
+        <th><b>Skill<b></th>
+        <th><b>Description<b></th>
+    </tr>
+    <tr><!-- INSERTION OF PICTURES -->
+        <td><img src="web.jpg" alt="Web Development"></td>
+        <td><B>WEB DESIGN</B> <br>
+        Proficiency in front-end technologies like HTML, CSS, and JavaScript, as well as any back-end languages like Python, or Java.</td>
+    </tr>
+    <tr>
+        <td><img src="gd.jpg" alt="Graphic Design"></td>
+        <td><B>GRAPHIC DESIGN</B> <br>
+         Design skills,  Adobe Creative Suite (Photoshop, Illustrator, etc.) and other design tools.</td>
+    </tr>
+    <tr>
+        <td><img src="ui.jpg" alt="UI/UX Design"></td>
+        <td><B>UI/ UX DESIGNING</B> <br> Ability to create user-friendly interfaces and experiences.</td>
+    </tr>
+    <tr>
+        <td><img src="content.jpg" alt="Content Management Systems" style="height: 230px;"></td>
+        <td><B>UI/ UX DESIGNING</B> <br> Experience with platforms like WordPress, Joomla, and Drupal and many more.</td>
+    </tr>
+    <tr>       
+    </div>
+    </table>
+            
+              <!-- THIS SECTION IS FOR HE ORGANIZATION OF CLICKABLE BUTTONS THAT WILL DIRECT TO HE OTHER WEBPAGES -->
+            <section>
+                <div class="containerism" style="margin-top: 30px;">
+        <h1>Get to know more about me!</h1>
+        <button class="infos"  onclick="location.href='personal_info.html'">Personal Information</button>
+        <button class="infos"  onclick="location.href='skills.html'">Skills</button>
+        <button class="infos"  onclick="location.href='education_projects.html'">Education & Projects</button>
+        <button class="infos"  onclick="location.href='work_experience.html'">Work Experience</button>
+            <button class="infos"  onclick="location.href='contact_info.html'">Contact Information</button>
+        </div>
+    </section>
+     <br><br><br>      
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Personal Website</p>
+        </div>
+    </footer>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        let darkMode = false;
+
+        function toggleTheme() {
+            darkMode = !darkMode;
+            if (darkMode) {
+                document.body.style.backgroundColor = '#222';
+                document.body.style.color = '#fff';
+                themeToggle.innerText = '☀';
+            } else {
+                document.body.style.backgroundColor = '#f0f0f0';
+                document.body.style.color = '#333';
+                themeToggle.innerText = '🌙';
+            }
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+               
+    </script>
+</body>
+</html>
